@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <title>Heart Disease Predictor</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><i class="bi bi-code-slash"></i>Vital Echo</div>
+        <input type="checkbox" name="check" id="check" />
+        <label for="check" id="checkbtn"><i class="bi bi-list"></i></label>
+        <ul class="menu-items">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Suggestions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero">
+      <div class="text">
+        <h1>With a healthy heart, the beat goes on.</h1>
+        <p>
+            Within the chambers of vulnerability, where beats the symphony of life, 
+            sometimes whispers the shadow of heart disease. 
+            Yet amidst the delicate cadence, hope orchestrates a melody of resilience, 
+            guiding us to mend and flourish anew.
+        </p>
+        <button id = "formButton">Get Started</button>
+        <script>
+          document.getElementById("formButton").addEventListener("click",function(){
+            window.location.href = "form.html";
+          });
+        </script>
+      </div>
+      <div class="img">
+        <img src="./img/pexels-ella-olsson-1640777.jpg" alt="" />
+      </div>
+    </section>
+    <section id="features">
+      <div class="content">
+        <p>Features</p>
+        <h2>Delivering Care through Service Spectrum</h2>
+        <img src="./img/features.png" alt="" />
+      </div>
+      <div class="cards">
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>Easy Risk Assessment</h3>
+        </div>
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>Simplified Data Management</h3>
+        </div>
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>Tailored Insights</h3>
+        </div>
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>Customized Action Plan</h3>
+        </div>
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>Future Risk Projection</h3>
+        </div>
+        <div class="card">
+          <i class="bi bi-check"></i>
+          <h3>User-Friendly Interface</h3>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="content">
+        <p>Services</p>
+        <h2>What we provide?</h2>
+        <div class="cards">
+          <div class="card card-android">
+            <div class="card-body">
+              <i class="bi bi-android"></i>
+              <h2>Risk Assessment</h2>
+              <p>
+                A user-friendly platform that guides users through a comprehensive assessment of their heart disease risk factors and medical history.
+              </p>
+              <p>Provides an intuitive interface to input and manage personal health data.</p>
+            </div>
+          </div>
+          <div class="card card-website">
+            <div class="card-body">
+              <i class="bi bi-code-square"></i>
+              <h2>Personalized Heart Disease Prediction Algorithms</h2>
+              <p>
+                Machine learning algorithms that analyze user data and generate personalized predictions of heart disease risk
+              </p>
+              <p>Offers clear and actionable insights based on data patterns.</p>
+            </div>
+          </div>
+          <div class="card card-others">
+            <div class="card-body">
+              <i class="bi bi-chat-right"></i>
+              <h2>Customized Action Plan Recommendations</h2>
+              <p>
+                Generates tailored action plans based on the user's risk profile, suggesting lifestyle modifications, medication, and interventions.
+              </p>
+              <p>Provides clear explanations and resources to help users understand and implement recommendations.</p>
+            </div>
+          </div>
+          <div class="card card-website">
+            <div class="card-body">
+              <i class="bi bi-code-square"></i>
+              <h2>Data Security</h2>
+              <p>
+                Implements robust security measures to safeguard user data, ensuring privacy and compliance with data protection regulations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content">
+        <p>Suggestions</p>
+        <h2>Inspiring Feedback</h2>
+      </div>
+      <form action="" method="get" accept-charset="utf-8">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" value="" />
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" value="" />
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" value="" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="8" cols="40"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <h3><i class="bi bi-code-slash"></i>Vital Echo</h3>
+        <p>
+          Unlocking tomorrow's wellness today, where data embraces the heart's melody.
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

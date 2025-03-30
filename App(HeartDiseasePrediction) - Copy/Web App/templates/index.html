@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Heart Disease Prediction! 👽</title>
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/style.css')}}">
+</head>
+
+<body>
+ <div class="grid">
+    <p>Kindly fill the required details.</p>
+  <div class="box">
+     <form action="{{url_for('predict')}}"method="post">
+        <div class = "form-container">
+          <h2>Enter your Age</h2>
+          <label for = "Age">Age : </label><br>
+          <input type="number" id = "Age" name="Age" placeholder="years" required="required" min="1" max="200" /><br>
+        </div>
+        <div class = "form-container">
+          <h2>What's your Gender</h2>
+          <label for = "Sex">Gender : </label><br>
+          <input type = "radio" id= "male" name ="gender" value="Male"><span> Male</span>
+          <input type = "radio" id= "female" name ="gender" value="Female"><span> Female</span>
+        </div>
+        <div class = "form-container">
+          <h2>Select your Chest Pain Type</h2>
+          <label for = "ChestPainType">Chest Pain Type :</label>
+          <label for = "ChestPainType">Chest Pain Type :  
+          </label><br>
+          <select name = "ChestPainType" id = "ChestPainType">
+            <option value = "Select" selected>Select</option>
+            <option value = 1>
+               ATA
+            </option>
+            <option value = 2>
+               NAP
+            </option>
+            <option value = 3>
+               ASY
+            </option>
+            <option value = 0>
+               TA
+            </option>
+          </select><br>
+        </div>
+        <div class = "form-container">
+          <h2>Enter your Resting Blood Pressure</h2>
+          <label for = "RestingBP">Resting Blood Pressure : </label><br>
+          <input type="number" id = "RestingBP" name="RestingBP" placeholder = "RestingBP" required="required" /><br>
+        </div>
+        <div class = "form-container">
+          <h2>Enter your Cholesterol</h2>
+          <label for = "Cholesterol">Cholesterol : </label><br>
+          <input type="number" id = "Cholesterol" name="Cholesterol" placeholder = "Cholesterol" required="required" /><br>
+        </div>
+        <div class = "form-container">
+          <h2>Select your Fasting Blood Sugar</h2>
+          <label for = "FastingBS">Fasting Blood Sugar :  </label><br>
+          <select name = "FastingBS" id = "FastingBS">
+            <option value = "Select" selected>Select</option>
+            <option value = 0>Normal</option>
+            <option value = 1>Diabetic</option>
+          </select><br>
+        </div>
+        <div class = "form-container">
+          <h2>Select your Resting ECG</h2>
+          <label for = "RestingECG">Resting ECG : </label><br>
+          <select name = "RestingECG" id = "RestingECG">
+            <option value = "Select" selected>Select</option>
+            <option value = 1>Normal</option>
+            <option value = 2>ST</option>
+            <option value = 0>LVH</option>
+          </select><br>
+        </div>
+        <div class = "form-container">
+          <h2>Enter your Maximum Heart Rate</h2>
+          <label for = "MaxHR">Maximum Heart Rate : </label><br>
+          <input type="number" id = "MaxHR" name="MaxHR" placeholder = "Maximum Heart Rate" required="required" /><br>
+        </div>
+        <div class = "form-container">
+          <h2>Do you have Exercise Angina?</h2>
+          <label for = "ExerciseAngina">Exercise Angina : </label><br>
+          <select name = "ExerciseAngina" id = "ExerciseAngina">
+            <option value = "Select" selected>Select</option>
+            <option value = 1>Yes</option>
+            <option value = 0>No</option>
+          </select><br>
+        </div>
+        <div class = "form-container">
+          <h2>Select your ST Slope</h2>
+          <label for = "ST_Slope">ST Slope : </label><br>
+          <select name = "ST_Slope" id = "ST_Slope">
+            <option value = "Select" selected>Select</option>
+            <option value = 2>Up</option>
+            <option value = 1>Flat</option>
+            <option value = 0>Down</option>
+          </select><br>
+        </div>
+        <div class = "form-container">
+          <button type="Submit" class="btn">Check my health</button>
+        </div>
+    </form>
+    <div class = "form-container">
+      <h2>Result</h2>
+      <div class = "result">
+        <p>{{ prediction_text }}</p>
+      </div>
+    </div>
+ </div>
+</div>
+
+</body>
+</html>

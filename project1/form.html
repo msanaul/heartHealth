@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Health Information Form</h1>
+        <form action="{{url_for('predict')}}" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="chestpaintype">Chest Pain Type:</label>
+                <select id="chestpaintype" name="chestpaintype" required>
+                    <option value="ata">ATA</option>
+                    <option value="nap">NAP</option>
+                    <option value="asy">ASY</option>
+                    <option value="ta">TA</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="restingbp">Resting Blood Pressure:</label>
+                <input type="text" id="restingbp" name="restingbp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cholesterol">Cholesterol:</label>
+                <input type="text" id="cholesterol" name="cholesterol" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fastingbloodsugar">Fasting Blood Sugar:</label>
+                <select id="fastingbloodsugar" name="fastingbloodsugar" required>
+                    <option value="normal">Normal</option>
+                    <option value="diabetic">Diabetic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="restingecg">Resting ECG:</label>
+                <select id="restingecg" name="restingecg" required>
+                    <option value="normal">Normal</option>
+                    <option value="st">ST</option>
+                    <option value="lvh">LVH</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="maxheartrate">Maximum Heart Rate:</label>
+                <input type="text" id="maxheartrate" name="maxheartrate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exerciseangina">Exercise Angina:</label>
+                <select id="exerciseangina" name="exerciseangina" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stslope">ST Slope:</label>
+                <select id="stslope" name="stslope" required>
+                    <option value="up">Up</option>
+                    <option value="flat">Flat</option>
+                    <option value="down">Down</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
